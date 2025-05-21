@@ -206,3 +206,14 @@ FileNotFoundError: [WinError 2] The system cannot find the file specified
 2025-05-21 14:22:01,508 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
 2025-05-21 14:22:07,162 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
 2025-05-21 14:22:07,250 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-21 15:37:14,411 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-21 15:42:25,531 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-21 15:45:18,491 - __main__ - WARNING - LLM warm-up failed: name 'llm' is not defined
+2025-05-21 15:45:18,591 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-05-21 15:45:18,888 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-05-21 15:45:18,904 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-05-21 15:47:16,241 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-05-21 15:47:52,553 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-21 15:49:40,950 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-21 15:54:51,975 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-21 17:07:35,223 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"

@@ -1,12 +1,12 @@
 import streamlit as st
 import logging
 from langchain_community.vectorstores import FAISS
-from langchain_ollama import OllamaEmbeddings  # Change to Ollama embeddings
+from langchain_ollama import OllamaEmbeddings
 from langchain.chains import RetrievalQA
 from langchain_ollama import OllamaLLM
 import os
 
-EMBEDDING_MODEL = "mistral"  # Use same model as LLM for embeddings
+EMBEDDING_MODEL = "mistral"
 LLM_MODEL = "mistral"
 VECTORSTORE_DIR = "vectorstores"
 
@@ -20,8 +20,15 @@ def get_embeddings():
 
 @st.cache_resource
 def get_llm():
-    return OllamaLLM(model=LLM_MODEL, temperature=0.0, num_ctx=1024, top_k=10, top_p=0.8, repeat_penalty=1.0)
-
+    return OllamaLLM(
+        model=LLM_MODEL,
+        temperature=0.0,
+        num_ctx=1024,
+        top_k=10,
+        top_p=0.8,
+        repeat_penalty=1.0,
+        base_url="http://localhost:11434"  # Make sure this matches your Ollama setup
+    )
 
 def get_existing_vectorstores():
     return [os.path.join(VECTORSTORE_DIR, f) for f in os.listdir(VECTORSTORE_DIR) 
@@ -50,8 +57,8 @@ def get_qa_chain(docs=None, k=3):
             return None
         try:
             db = FAISS.from_documents(all_docs, embeddings)
-        except _common.GoogleGenerativeAIError as e:
-            st.error(f"Google Generative AI embedding error: {str(e)}")
+        except Exception as e:
+            st.error(f"Embedding error: {str(e)}")
             logging.error(f"Embedding error: {e}")
             return None
         retriever = db.as_retriever(search_kwargs={"k": k})
