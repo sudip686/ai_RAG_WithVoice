@@ -102,7 +102,7 @@ col1, col2 = st.columns([4, 1])
 
 with col2:
     audio = mic_recorder(start_prompt="🎤 Record", stop_prompt="⏹️ Stop")
-    if audio:
+    if audio and audio.get("bytes"):  # Check if audio data exists
         tmp_audio_path = None
         try:
             with tempfile.NamedTemporaryFile(delete=False, suffix=".wav") as tmp_audio:
@@ -111,12 +111,17 @@ with col2:
             
             if "whisper_model" not in st.session_state:
                 st.session_state.whisper_model = whisper.load_model("base")
+            
+            # Ensure file is properly closed before transcription
+            import time
+            time.sleep(0.1)  # Small delay to ensure file is written
+            
             result = st.session_state.whisper_model.transcribe(tmp_audio_path)
-            # Store transcribed text in session state
             st.session_state.current_question = result["text"]
             st.success("Voice input captured!")
         except Exception as e:
-            st.error(f"Voice transcription failed: {e}")
+            st.error(f"Voice transcription failed: {str(e)}")
+            logger.error(f"Voice transcription error: {str(e)}", exc_info=True)
         finally:
             if tmp_audio_path and os.path.exists(tmp_audio_path):
                 try:
