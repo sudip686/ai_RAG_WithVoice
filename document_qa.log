@@ -1,0 +1,208 @@
+2025-05-21 12:36:29,871 - __main__ - INFO - FFMPEG binary path set to: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin\ffmpeg.exe
+2025-05-21 12:36:36,124 - __main__ - INFO - Vectorstore directory initialized at: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:36:36,136 - __main__ - INFO - Top K matches set to: 3
+2025-05-21 12:36:36,140 - __main__ - INFO - Found 4 existing documents in vectorstore
+2025-05-21 12:36:36,142 - __main__ - INFO - Selected document: All
+2025-05-21 12:38:39,102 - __main__ - INFO - FFMPEG binary path set to: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin\ffmpeg.exe
+2025-05-21 12:38:44,068 - __main__ - INFO - Vectorstore directory initialized at: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:38:44,079 - __main__ - INFO - Top K matches set to: 3
+2025-05-21 12:38:44,082 - __main__ - INFO - Found 4 existing documents in vectorstore
+2025-05-21 12:38:44,088 - __main__ - INFO - Selected document: All
+2025-05-21 12:39:02,828 - __main__ - INFO - FFMPEG binary path set to: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin\ffmpeg.exe
+2025-05-21 12:39:02,829 - __main__ - INFO - Vectorstore directory initialized at: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:39:02,833 - __main__ - INFO - Top K matches set to: 3
+2025-05-21 12:39:02,835 - __main__ - INFO - Found 4 existing documents in vectorstore
+2025-05-21 12:39:02,838 - __main__ - INFO - Selected document: All
+2025-05-21 12:39:02,843 - __main__ - INFO - Audio recording received
+2025-05-21 12:39:02,849 - __main__ - INFO - Starting audio transcription with Whisper
+2025-05-21 12:39:04,251 - __main__ - ERROR - FFmpeg not found at C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin\ffmpeg.exe
+Traceback (most recent call last):
+  File "C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\app.py", line 220, in <module>
+    result = model.transcribe(tmp_audio_path)
+  File "C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\.venv\lib\site-packages\whisper\transcribe.py", line 133, in transcribe
+    mel = log_mel_spectrogram(audio, model.dims.n_mels, padding=N_SAMPLES)
+  File "C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\.venv\lib\site-packages\whisper\audio.py", line 140, in log_mel_spectrogram
+    audio = load_audio(audio)
+  File "C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\.venv\lib\site-packages\whisper\audio.py", line 58, in load_audio
+    out = run(cmd, capture_output=True, check=True).stdout
+  File "C:\Users\SUDIPTA CHANDA\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 501, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "C:\Users\SUDIPTA CHANDA\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\SUDIPTA CHANDA\AppData\Local\Programs\Python\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-05-21 12:39:04,261 - __main__ - INFO - Question submitted: 
+2025-05-21 12:47:24,092 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:47:24,093 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:47:41,747 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:47:41,749 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:47:53,051 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:47:53,054 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:48:00,331 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:48:00,332 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:48:06,094 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:48:06,094 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:48:11,891 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:48:11,891 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:48:17,880 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:48:17,881 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:48:24,530 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:48:24,531 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:48:30,361 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:48:30,362 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:48:36,055 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:48:36,056 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:48:41,805 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:48:41,805 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:48:47,734 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:48:47,735 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:48:53,326 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:48:53,327 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:48:55,899 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:48:55,900 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:49:03,123 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:49:03,127 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:49:12,337 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:49:12,339 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:49:22,084 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:49:22,085 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:49:28,958 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:49:28,960 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:49:38,262 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:49:38,263 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:49:47,401 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:49:47,402 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:49:52,707 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:49:52,708 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:49:55,328 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:49:55,329 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:50:00,707 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:50:00,708 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:50:05,676 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:50:05,677 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:50:11,786 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:50:11,787 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:50:17,218 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:50:17,219 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:50:23,016 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:50:23,016 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:50:28,957 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:50:28,958 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:50:34,257 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:50:34,258 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:50:39,752 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:50:39,753 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:50:43,352 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:50:43,353 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:50:51,518 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:50:51,519 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:51:00,963 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:51:00,965 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:51:06,149 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:51:06,150 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:51:11,438 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:51:11,440 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:51:16,461 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:51:16,462 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:51:22,996 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:51:22,996 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:51:31,933 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:51:31,935 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:51:36,171 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:51:36,173 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:51:40,967 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:51:40,969 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:51:50,530 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:51:50,531 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:51:59,582 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:51:59,584 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:52:08,984 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:52:08,985 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:52:18,918 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:52:18,919 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:52:28,058 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:52:28,059 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:52:37,030 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:52:37,032 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:52:41,128 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:52:41,129 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:52:51,148 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:52:51,149 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:52:55,407 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:52:55,409 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:52:59,894 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:52:59,895 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:53:09,545 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:53:09,546 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:54:11,396 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:54:11,397 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:54:25,335 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:54:25,336 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:55:23,990 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 12:55:23,991 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 12:55:24,106 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-05-21 12:55:24,207 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-05-21 12:55:24,223 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-05-21 13:02:39,873 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 13:02:39,874 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 13:02:39,874 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 13:02:39,875 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 13:02:58,104 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 13:02:58,106 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 13:05:18,952 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 13:05:18,953 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 13:05:19,019 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-05-21 13:05:21,455 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-05-21 13:05:21,462 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-05-21 13:07:17,449 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 13:07:17,452 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 13:07:23,757 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 13:07:23,759 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 13:08:54,118 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 13:08:54,120 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 13:09:02,511 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 13:09:02,512 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 13:13:03,247 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 13:13:03,250 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 13:14:03,144 - root - ERROR - Embedding error: Error embedding content: Timeout of 60.0s exceeded, last exception: 503 failed to connect to all addresses; last error: UNAVAILABLE: ipv4:142.250.207.74:443: ConnectEx: No route to host (A socket operation was attempted to an unreachable host.
+ -- 10065)
+2025-05-21 14:10:00,886 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 14:10:00,888 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 14:11:53,599 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 14:11:53,600 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 14:12:00,235 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-05-21 14:12:00,251 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-05-21 14:12:01,044 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-05-21 14:12:01,054 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-05-21 14:12:25,518 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 14:12:25,520 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 14:12:36,107 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 14:12:36,109 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 14:14:34,963 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-05-21 14:14:36,340 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-05-21 14:14:42,267 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-21 14:14:56,317 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 14:14:56,321 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 14:15:05,335 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 14:15:05,338 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 14:15:39,862 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 14:15:39,863 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 14:15:50,337 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 14:15:50,339 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 14:15:51,595 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 14:15:51,597 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 14:16:50,815 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-05-21 14:18:29,606 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-05-21 14:18:41,277 - __main__ - INFO - FFMPEG path added to environment PATH: C:\Users\SUDIPTA CHANDA\models\ffmpeg-7.1.1-essentials_build\bin
+2025-05-21 14:18:41,280 - __main__ - INFO - Vectorstore directory: C:\Users\SUDIPTA CHANDA\PycharmProjects\ReAct Agent\vectorstores
+2025-05-21 14:20:06,233 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-05-21 14:20:06,271 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-05-21 14:20:07,315 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-05-21 14:21:45,266 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-05-21 14:21:51,336 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-21 14:21:51,337 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-21 14:22:01,429 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-05-21 14:22:01,508 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-05-21 14:22:07,162 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-05-21 14:22:07,250 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"

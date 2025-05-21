@@ -1,0 +1,44 @@
+# LangChain Core
+langchain
+langchain-community
+langchain-openai
+langchainhub
+
+# LLM Provider
+openai
+
+# Vector Store (choose any)
+faiss-cpu         # For FAISS
+# chromadb        # Uncomment if using Chroma
+
+# PDF Handling
+pypdf              # Text extraction from PDFs
+pdf2image          # Image extraction from PDFs
+pdfminer.six       # Alternative for fine-grained text
+PyMuPDF            # Fast image and text handling
+
+# Image Handling
+Pillow
+opencv-python
+
+# Multimodal LLMs
+# GPT-4o or GPT-4-vision (via OpenAI)
+# or
+# llava / gemini / google-palm APIs
+
+# Document Loaders
+unstructured       # Better document chunking for images
+pytesseract        # OCR for images inside PDFs
+
+# Embeddings
+sentence-transformers  # If using local embeddings
+transformers
+torch
+
+# Web & UI
+streamlit          # Optional, for UI
+gradio             # Optional, for web demo
+
+# Utility
+python-dotenv
+tqdm
