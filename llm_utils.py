@@ -20,7 +20,8 @@ def get_embeddings():
 
 @st.cache_resource
 def get_llm():
-    return OllamaLLM(model=LLM_MODEL, temperature=0.1, num_ctx=2048, top_k=20, top_p=0.9, repeat_penalty=1.1)
+    return OllamaLLM(model=LLM_MODEL, temperature=0.0, num_ctx=1024, top_k=10, top_p=0.8, repeat_penalty=1.0)
+
 
 def get_existing_vectorstores():
     return [os.path.join(VECTORSTORE_DIR, f) for f in os.listdir(VECTORSTORE_DIR) 
