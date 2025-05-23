@@ -13,7 +13,10 @@ from streamlit_autorefresh import st_autorefresh
 import streamlit as st
 from pdf_handler import load_and_process_pdf
 from docx_handler import load_and_process_docx
+from csv_handler import load_and_process_csv
 from llm_utils import get_embeddings, get_llm, get_existing_vectorstores, get_qa_chain
+
+import shutil
 
 # Patch Streamlit watcher to ignore torch internal errors
 if 'torch' in sys.modules:
@@ -57,15 +60,57 @@ if "transcriptions" not in st.session_state:
 # Sidebar
 with st.sidebar:
     st.header("📁 Document Management")
-    uploaded_file = st.file_uploader("Upload PDF or DOCX:", type=["pdf", "docx"])
+    uploaded_file = st.file_uploader("Upload document (PDF, DOCX, or CSV):", type=["pdf", "docx", "csv"])
     k_value = st.slider("Number of relevant chunks:", 1, 10, 3)
     
-    # Document selection
+    # Document selection and management
+    st.subheader("📚 Document Selection")
     docs = get_existing_vectorstores()
     selected_doc = st.selectbox(
         "Select document to query:",
         ["All"] + [os.path.basename(p) for p in docs]
     )
+    
+    # Document removal section
+    if docs:
+        st.subheader("🗑️ Document Management")
+        doc_to_remove = st.selectbox(
+            "Select document to remove:",
+            [os.path.basename(p) for p in docs]
+        )
+        
+        if st.button("Remove Selected Document"):
+            try:
+                doc_path = os.path.join(VECTORSTORE_DIR, doc_to_remove)
+                status_path = doc_path + ".status"
+                
+                # Remove the vectorstore and status file
+                if os.path.exists(doc_path):
+                    shutil.rmtree(doc_path)
+                if os.path.exists(status_path):
+                    os.remove(status_path)
+                    
+                st.success(f"Successfully removed {doc_to_remove}")
+                st.rerun()
+            except Exception as e:
+                st.error(f"Error removing document: {e}")
+        
+        if st.button("Remove All Documents"):
+            try:
+                # Remove all vectorstores and status files
+                for doc in docs:
+                    doc_path = os.path.join(VECTORSTORE_DIR, os.path.basename(doc))
+                    status_path = doc_path + ".status"
+                    
+                    if os.path.exists(doc_path):
+                        shutil.rmtree(doc_path)
+                    if os.path.exists(status_path):
+                        os.remove(status_path)
+                
+                st.success("Successfully removed all documents")
+                st.rerun()
+            except Exception as e:
+                st.error(f"Error removing documents: {e}")
 
 # Document processing
 if uploaded_file:
@@ -81,7 +126,12 @@ if uploaded_file:
             
         try:
             with st.spinner("Processing document..."):
-                chunks = load_and_process_pdf(tmp_path) if uploaded_file.name.endswith('.pdf') else load_and_process_docx(tmp_path)
+                if uploaded_file.name.endswith('.pdf'):
+                    chunks = load_and_process_pdf(tmp_path)
+                elif uploaded_file.name.endswith('.csv'):
+                    chunks = load_and_process_csv(tmp_path)
+                else:
+                    chunks = load_and_process_docx(tmp_path)
                 db = FAISS.from_documents(chunks, get_embeddings())
                 db.save_local(faiss_path)
                 st.success("Document processed successfully!")
